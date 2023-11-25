@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+}
+body .box {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #302e35;
+  border-radius: 0.3em;
+  box-shadow: 1px 5px 8px 10px #8862fa;
+}
+body .box .top {
+  display: grid;
+  place-items: center;
+  font-family: "Nothing You Could Do";
+}
+body .box .draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  padding: 0.6em;
+  flex: 1;
+}
+body .box .draggable_list {
+  list-style: none;
+  border: 1px solid #8862fa;
+}
+body .box .draggable_list li {
+  display: flex;
+  gap: 0.3em;
+  background: #606060;
+  flex: 1;
+}
+body .box .draggable_list li.over .draggable {
+  background-color: #534949;
+}
+body .box .draggable_list .number {
+  background-color: #302e35;
+  display: flex;
+  width: 2em;
+  height: 2em;
+  font-size: 1.2rem;
+  place-items: center;
+  place-content: center;
+}
+body .box .draggable_list li.right .person-name {
+  color: #46f822;
+}
+body .box .draggable_list li.wrong .person-name {
+  color: #fc1f1f;
+}
+body .box .draggable_list li:not(:last-of-type) {
+  border-bottom: 1px solid #8862fa;
+}
+body .box .check_btn {
+  background-color: #110000;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  padding: 0.5em;
+  color: #8862fa;
+  cursor: pointer;
+}
+body .box .check_btn:active {
+  transform: scale(0.98);
+}
+body .box .check_btn:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=list.css.map */

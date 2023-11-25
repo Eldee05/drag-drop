@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body
+{
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+
+    .box{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background: #302e35;
+        border-radius: .3em;
+        box-shadow: 1px 5px 8px 10px #8862fa;
+
+        .top{
+            display: grid;
+            place-items: center;
+            font-family: 'Nothing You Could Do';
+        }
+
+        .draggable{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            place-content: center;
+            padding: .6em;
+            flex: 1;
+        }
+
+        .draggable_list{
+            list-style: none;
+            border: 1px solid #8862fa;
+             
+
+            li{
+                display: flex;
+                gap: .3em;
+                background: #606060;
+                flex: 1;
+
+                
+            }
+
+            li.over .draggable{
+                background-color: #534949;
+            }
+
+            .number{
+                background-color: #302e35;
+                display: flex;
+                width: 2em;
+                height: 2em;
+                font-size: 1.2rem;
+                place-items: center;
+                place-content: center;
+            }
+
+            li .right .person-name{
+                color: #46f822;
+            }
+            li .wrong .person-name{
+                color: #fc1f1f;
+            }
+        }
+
+        .draggable_list li:not(:last-of-type){
+            border-bottom: 1px solid #8862fa;
+        }
+
+        .check_btn{
+            background-color: #100f;
+            border: none; 
+            font-size: .8rem;
+            font-weight: lighter;
+            padding: .5em;
+            color: #8862fa;
+            cursor: pointer;
+        }
+        .check_btn:active{
+            transform: scale(.98);
+        }
+        .check_btn:focus{
+            outline: none;
+        }
+    }
+}
+/*# sourceMappingURL=list.css.map */
